@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  srm:
+    image: com/emc/coprhd/srm:${VERSION}
+    container_name: SRM-node-1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - VERSION=${VERSION}
